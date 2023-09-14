@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Register = () => {
+  const array = ["Techinal Board", "OSS", "Cultural Board", "Sports"];
+  const [Club, setClub] = useState(0);
   return (
     <div>
       <form>
@@ -37,6 +39,65 @@ const Register = () => {
             We'll never share your email with anyone else.
           </small>
         </div>
+        <div className="dropdown mb-3 ">
+          <button
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenu2"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {array[Club]}
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li>
+              <button
+                className="dropdown-item"
+                type="button"
+                onClick={() => setClub(0)}
+              >
+                {array[0]}
+              </button>
+            </li>
+            <li>
+              <button
+                className="dropdown-item"
+                type="button"
+                onClick={() => setClub(1)}
+              >
+                {array[1]}
+              </button>
+            </li>
+            <li>
+              <button
+                className="dropdown-item"
+                type="button"
+                onClick={() => setClub(2)}
+              >
+                {array[2]}
+              </button>
+            </li>
+            <li>
+              <button
+                className="dropdown-item"
+                type="button"
+                onClick={() => setClub(3)}
+              >
+                {array[3]}
+              </button>
+            </li>
+            <li>
+              <button
+                className="dropdown-item"
+                type="button"
+                onClick={() => setClub(4)}
+              >
+                {array[4]}
+              </button>
+            </li>
+          </ul>
+        </div>
+
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input
