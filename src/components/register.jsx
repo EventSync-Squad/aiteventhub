@@ -1,10 +1,20 @@
 import React from "react";
 
-export default function register() {
+const Register = () => {
   return (
     <div>
       <form>
-      <div class="form-group">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Registration no.</label>
+          <input
+            type="number"
+            class="form-control"
+            id="regno"
+            aria-describedby="emailHelp"
+            placeholder="Enter Reg No"
+          />
+        </div>
+        <div class="form-group">
           <label for="exampleInputEmail1">Name</label>
           <input
             type="text"
@@ -48,4 +58,6 @@ export default function register() {
       </form>
     </div>
   );
-}
+};
+
+export default Register;
